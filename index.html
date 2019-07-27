@@ -13,19 +13,64 @@
       .lyrics-part {
         margin-top: 16px;
       }
+
+      .verses {
+        font-size: 18px;
+      }
+
+      .lyrics > div {
+        margin-bottom: 0.5em;
+      }
+
+      #verse::before {
+        content: 'Couplet actuel'
+      }
+
+      #next-verse::before {
+        content: 'Prochain couplet'
+      }
+
+      #verse::before, #next-verse::before {
+        display: block;
+        border-bottom: 1px solid #333;
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+      }
+
+      @media(min-width: 900px) {
+        html {
+          font-size: 22px;
+        }
+        .verses {
+          display: flex;
+        }
+
+        .verses .lyrics {
+          flex: 1;
+        }
+      }
     </style>
   </head>
   <body>
     <h1>La tristitude</h1>
     <h2>Générateur de paroles</h2>
 
-    <section id="verse" class="lyrics">
-      <div class="title">La tristitude</div>
-      <div id="first" class="lyrics-part"></div>
-      <div id="second" class="lyrics-part"></div>
-      <div id="third" class="lyrics-part"></div>
-      <div id="closing" class="lyrics-part"></div>
-    </section>
+    <div class="verses">
+      <section id="verse" class="lyrics">
+        <div class="title">La tristitude,</div>
+        <div class="first" class="lyrics-part"></div>
+        <div class="second" class="lyrics-part"></div>
+        <div class="third" class="lyrics-part"></div>
+        <div class="closing" class="lyrics-part"></div>
+      </section>
+      <section id="next-verse" class="lyrics">
+        <div class="title">La tristitude,</div>
+        <div class="first" class="lyrics-part"></div>
+        <div class="second" class="lyrics-part"></div>
+        <div class="third" class="lyrics-part"></div>
+        <div class="closing" class="lyrics-part"></div>
+      </section>
+    </div>
     <section id="chorus" class="lyrics" style="display: none">
       <div class="title">(Refrain) La tristitude</div>
       <div class="lyrics-part">C'est moi, c'est toi</div>
@@ -377,11 +422,17 @@
         
         // Show chorus and hide verse when needed
         document.querySelector('#verse').style.display = countForChorus === INITIAL_VALUE ? 'none' : 'block'
+        document.querySelector('#next-verse').style.display = countForChorus === INITIAL_VALUE ? 'none' : 'block'
         document.querySelector('#chorus').style.display = countForChorus === INITIAL_VALUE ? 'block' : 'none'
         
         const newLyrics = window.lyrics[index % window.lyrics.length]
         Object.entries(newLyrics).forEach(([selector, lyrics]) => {
-          document.querySelector(`#${selector}`).innerHTML = lyrics
+          document.querySelector(`#verse .${selector}`).innerHTML = lyrics
+        })
+        
+        const nextLyrics = window.lyrics[(index + 1) % window.lyrics.length]
+        Object.entries(nextLyrics).forEach(([selector, lyrics]) => {
+          document.querySelector(`#next-verse .${selector}`).innerHTML = lyrics
         })
       }
       
