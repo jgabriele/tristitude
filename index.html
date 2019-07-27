@@ -1,0 +1,393 @@
+<html>
+  <head>
+    <title>La tristitude – Générateur de paroles</title>
+    <meta charset="utf8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <style>
+      .lyrics {
+        font-family: "Helvetica Neue", Roboto, Arial;
+        background: lightblue;
+        padding: 16px;
+      }
+
+      .lyrics-part {
+        margin-top: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>La tristitude</h1>
+    <h2>Générateur de paroles</h2>
+
+    <section id="verse" class="lyrics">
+      <div class="title">La tristitude</div>
+      <div id="first" class="lyrics-part"></div>
+      <div id="second" class="lyrics-part"></div>
+      <div id="third" class="lyrics-part"></div>
+      <div id="closing" class="lyrics-part"></div>
+    </section>
+    <section id="chorus" class="lyrics" style="display: none">
+      <div class="title">(Refrain) La tristitude</div>
+      <div class="lyrics-part">C'est moi, c'est toi</div>
+      <div class="lyrics-part">C'est nous, c'est quoi</div>
+      <div class="lyrics-part">C'est un peu de détresse dans le creux de nos bras</div>
+      <div class="lyrics-part">La tristitude</div>
+      <div class="lyrics-part">C'est hum, c'est ouh</div>
+      <div class="lyrics-part">C'est eux, c'est vous</div>
+      <div class="lyrics-part">C'est la vie qui te dis que ça ne vas pas du tout</div>
+    </section>
+    <script>
+      window.lyrics = [
+          {
+            "first": "C'est quand tu viens juste d'avaler un cure - dent",
+            "second": "Quand tu te rends compte que ton père est Suisse - Allemand",
+            "third": "Quand un copain t'appelle pour son déménagement",
+            "closing": "... et ça fait mal"
+          },
+          {
+            "first": "C'est quand ton percepteur te souhaite la bonne année",
+            "second": "C'est quand on a un sale mec pour nous gouverner",
+            "third": "C'est ach'ter l'appart' de Jeanne Calmant en viager",
+            "closing": "C'est trop risqué..."
+          },
+          {
+            "first": "C'est faire du nudisme, en même temps que Guy Carlier",
+            "second": "C'est quand t'oublies ton chien, dans la voiture l'été",
+            "third": "Quand Joey Star te mord, et qu't'es pas vaccinée",
+            "closing": "... et ça fait mal"
+          },
+          {
+            "first": "C'est quand tu crois qu'ta femme a un piercing au nez",
+            "second": "Mais qu'c'est juste un bouton qu'est prêt à exploser",
+            "third": "Ah non c'est bon, c'est juste qu'il était infecté",
+            "closing": "Et ça fait moche"
+          },
+          {
+            "first": "C'est ta croisière en Italie qui tombe à leau",
+            "second": "T'façons le capitaine avait quitté l'bateau",
+            "third": "L'année prochaine tu feras une croisière à Velo",
+            "closing": "Ça s'ra moins cher"
+          },
+          {
+            "first": "C'est avoir besoin de capotes au Vatican",
+            "second": "C'est quand un tout petit orphelin de 6 ans",
+            "third": "Apprends un jour qu'le père noel c'est les parents",
+            "closing": "Et ça c'est triste..."
+          },
+          {
+            "first": "C'est quand un pote t'invite au meeting du FN",
+            "second": "C'est quand Jean Claude Vandamme parle à Brigitte Fontaine",
+            "third": "C'est quand Tarzan confond un peu Cheetah et Jane",
+            "closing": "Et ça fait mal"
+          },
+          {
+            "first": "C'est franchir le tunnel de Fourvière le 15 août",
+            "second": "Quand tu dois allez vivre à Nogent - le - Rotrou",
+            "third": "Quand ton coiffeur t'apprends que t' as des reflets roux",
+            "closing": "Et ça fait mal"
+          },
+          {
+            "first": "C'est faire en argentine la course Paris Dakkar",
+            "second": "Quand on t'propose à boire mais que c'est un clochard",
+            "third": "C'est quand Whitney Houston s'en va sans dire au revoir",
+            "closing": "ET ça fait maaaaa-aa-aaaaaaaaaal"
+          },
+          {
+            "first": "C'est quand un de tes deux jumeaux n'est pas de toi",
+            "second": "C'est quand un begue te parle du lac titikaka",
+            "third": "C'est jouer de la flute de pan dans Metallica",
+            "closing": "Et ça joue mal"
+          },
+          {
+            "first": "C'est la premiere fois que tu danse le Maddison",
+            "second": "C'est dire Chocolatine ailleurs qu'dans la Garonne",
+            "third": "C'est Elton John",
+            "closing": "Et ça fait mal"
+          },
+          {
+            "first": "C'est faire pipi debout quand t'es dans l'TGV",
+            "second": "C'est quand t'es la personne qui passe juste après",
+            "third": "C'est quand t'es la personne qui doit tout nettoyer",
+            "closing": "Ca fait mal"
+          },
+          {
+            "first": "C'est quand ta femme te dit qu'avant c'était un gars",
+            "second": "Quand tu te coupes un ongle, tu l'retrouves pas",
+            "third": "Quand y'a un clou rouillé dans la galette des rois",
+            "closing": "Ahn ahn ahn ahnnnn"
+          },
+          {
+            "first": "C'est quand ton fils te demande qui est son vrai papa",
+            "second": "Et que t'es obligé de dire que tu sais pas",
+            "third": "Tu dis que c'qui compte, c'est qu'on s'aime. Et il s'en va.",
+            "closing": "Et ça fait mal."
+          },
+          {
+            "first": "C'est devenir styliste mais pour Eddy Mitchell",
+            "second": "C'est conjuguer bouillir au subjonctif pluriel",
+            "third": "C'est faire les courses le samedi d'avant Noël",
+            "closing": "Et ça fait mal, mal, mal"
+          },
+          {
+            "first": "C'est quand un chanteur a le syndrome de Tourette",
+            "second": "Mais qu'il esssaye quand même de PUTE PUTE PUTE PUTE",
+            "third": "Pourtant mère Theresa PUTE PUTE PUTE ",
+            "closing": "Ca fait désordre"
+          },
+          {
+            "first": "C'est quand un chanteur est atteint d'une Alzheimer, t'imagines ?",
+            "second": "C'est quand un chanteur est atteint d'une Alzheimer, t'imagines ?",
+            "third": "C'est quand un chanteur est atteint d'une Alzheimer, t'imagines ?",
+            "closing": "Et ça fait mal"
+          },
+          {
+            "first": "C'est quand tu fais ta barmitsva en 43",
+            "second": "Quand Etienne Daho a une extinction de voix",
+            "third": "C'est tenter d'ouvrir un bar gai au nigeria",
+            "closing": "Et ça fait mal"
+          },
+          {
+            "first": "C'est quand un escargot rattrappe Grand Corps Malade",
+            "second": "Quand tu dis à une femme qu'elle a un bout de salade",
+            "third": "Quand elle te répond \"bah non c'est une carrie\"",
+            "closing": "Et ça fait réfléchir"
+          },
+          {
+            "first": "C'est quand Après t'avoir laissé payer la note",
+            "second": "Ton mec te dis qu'il a RDV chez des potes",
+            "third": "T'y vas quand même, t'as très envie de voir ses potes",
+            "closing": "Et là t'es con"
+          },
+          {
+            "first": "C'est quand après avoir joué à la console",
+            "second": "Ton mec et ses potes font quelques concours d'alcool",
+            "third": "Et ils se battent sur qui a la plus grosse bagnole",
+            "closing": "Et ça fait vroum vroum vroum"
+          },
+          {
+            "first": "C'est voir Mimi Matti jouer dans un film porno",
+            "second": "Quand t'appelles et que Naffissa tou dit \"allo?\"",
+            "third": "Être malade et soigné par Doc Gyneco",
+            "closing": "Et ça fait mal"
+          },
+          {
+            "first": "C'est quand tu manges à la cantine le Vendredi",
+            "second": "C'est apprendre notre langue à Eve Angeli",
+            "third": "Quand Johnny doute que ses filles soient vraiment de lui",
+            "closing": "Et ça fait mal"
+          },
+          {
+            "first": "C'est quand Niki Loda regarde les tetes brulées",
+            "second": "Quand a noel tu d'mande à tes enfants d'payer",
+            "third": "Quand tu parles au telephone, mais qu'ça a coupé",
+            "closing": "\"Alors j'lui ai dit... Tu m'écoutes hein? Allo? Eh merde\""
+          },
+          {
+            "first": "C'est quand des gens mettent un miroir dans leur toilettes",
+            "second": "C'est s'appeler Lelouche et faire des films honnêtes",
+            "third": "C'est quand tu montes sur une balance après les fêtes",
+            "closing": "Et ça fait... +6kg pour moi"
+          },
+          {
+            "first": "C'est Julien Clerc qui va voter au mois de Maaiaiiaiiaiai",
+            "second": "Quand t'as 15 ans et que ta mère rentre sans frapper",
+            "third": "Quand tu retrouves ton ongle au milieu d'se couplet",
+            "closing": "Et ça fait crade"
+          },
+          {
+            "first": "C'est quand t'as cru qu'c'était un anniv costumé",
+            "second": "C'est chanter un peu comme Zizou aux enfoirés",
+            "third": "C'est quand dans Kad et Olivier t'es Olibier",
+            "closing": "Et ça fait mal"
+          },
+          {
+            "first": "C'est quand la France s'étonne qu'il neige en Février",
+            "second": "C'est quand la France s'étonne qu'il fasse chaud en juillet",
+            "third": "Quand la France s'étonne pas qu'on vire des sans papier",
+            "closing": "Et ça fait réfléchir"
+          },
+          {
+            "first": "C'est travailler 8h par jour pour 1000€",
+            "second": "Quand ton frère siamois t'anonnce qu'il a la gastro",
+            "third": "C'est faire chanter une mélodie à Jeanne Moreau",
+            "closing": "Et ça fait mal"
+          },
+          {
+            "first": "C'est si Michel Drucker jouaient dans Highlander",
+            "second": "C'est si Christophe Lambert dev'nait présentateur",
+            "third": "Ou si je décidais de rester, chanteur",
+            "closing": "Et ça fait peur"
+          },
+          {
+            "first": "C'est libérer un chaton pris dans une cage",
+            "second": "Mais se rendre compte qu'il s'agit d'un gros chat sauvage",
+            "third": "Qui devient con, et te saute au visage",
+            "closing": "Et ça fait SHSHHSHSHSHSHS AHHHH MES YEUX"
+          },
+          {
+            "first": "C'est si t'as acheté un maillot de Ben Arfa",
+            "second": "C'est tenter une passe pour la tête de Valbuena",
+            "third": "C'est être dans la merde et recruter Kaka",
+            "closing": "Et ça fait mal"
+          },
+          {
+            "first": "C'est quand tu t'rends compte que tes parents sont stériles",
+            "second": "C'est Pierre Menez qui s'fait un piercing au nombril",
+            "third": "Etre représentant de Farine en Sicile",
+            "closing": "(Voix de parrain) Et ça fait louche"
+          },
+          {
+            "first": "C'est jouer à la barbichette avec Cantat",
+            "second": "C'est quand Igor apprend qu'il ressemble à Grishka",
+            "third": "C'est répondre à un bonjour qu'était pas pour toi",
+            "closing": "Et ça fait con"
+          },
+          {
+            "first": "C'est quand tes gosses rentrent dans la chambre pendant l'amour",
+            "second": "Quand tes parents rentrent dans la chambre pendant l'amour",
+            "third": "C'est quand ta femme rentre dans la chambre pendant l'amour",
+            "closing": "Ça fait chier"
+          },
+          {
+            "first": "C'est ton dentiste qui te pose un tas de question",
+            "second": "Tu fais aoaoaeoaaoaeaoaoa bref tu réponds",
+            "third": "Il te sourit mais tu  bien qu'il te trouve con",
+            "closing": "Et c'est injuste"
+          },
+          {
+            "first": "C'est quand vous rentrez tu conduis car il est rond",
+            "second": "En arrivant il Vomit tout dans ton salon",
+            "third": "Puis il te dit \"Je t'aime\", il se trompe de prénom",
+            "closing": "Et c'est dommage"
+          },
+          {
+            "first": "C'est réussir à perdre quand tu joues au Morpion",
+            "second": "Quand Valérie Damidot décore ta prison",
+            "third": "C'est quand ta femme décide de refaire le salon",
+            "closing": "Ça fait mal"
+          },
+          {
+            "first": "C'est un vieux en caisse sur la route à contresens",
+            "second": "C'est un vieux en caisse sur la route",
+            "third": "C'est un vieux en caisse",
+            "closing": "Et ça fait mal"
+          },
+          {
+            "first": "C'est quand ta copine t'offre le sexe pour les nuls",
+            "second": "C'est quand tu avances alors que moi je recule",
+            "third": "C'est ne pas déraper quand tu fais des rimes en ul",
+            "closing": "Ca fait propre"
+          },
+          {
+            "first": "C'est quand un begue au zoo remarque un Okapi",
+            "second": "C'est quand t'es le petit copain de mimi matti",
+            "third": "C'est quand au scrabble t'as K-Y-Q-X-J",
+            "closing": "Et ça fait KQJW"
+          },
+          {
+            "first": "C'est un lacet défait dans les toilettes Total",
+            "second": "Patrick Dupont qui signe avec ses initiales",
+            "third": "Si Henri Des se métait à faire du métal",
+            "closing": "Et ça fait \"Ouaiiiiis j'suis Satan les enfants !\""
+          },
+          {
+            "first": "C'est quand entre le plat du jour et le boursin",
+            "second": "Il sort de sa poche un joli petit écrin",
+            "third": "C'est juste des pilules pour ses problèmes de rein",
+            "closing": "Et ça fait chier"
+          },
+          {
+            "first": "C'est quand ton mec t'emmenes dinner chez El Rancho",
+            "second": "Quand il te dit c'est moi qui offre... L'apéro",
+            "third": "Il te dit que son ex bossait dans ce resto",
+            "closing": "Ca fait mal"
+          },
+          {
+            "first": "C'est quand il t'explique qu'y'a une promo cette semaine",
+            "second": "Ils font la viande de buffle au prix d'la viande de Renne",
+            "third": "Tu t'en fous un peu toi t'es végétarienne",
+            "closing": "Et ça fait mal"
+          },
+          {
+            "first": "C'est prendre l'autoroute à contre sens, et à Velo",
+            "second": "Quand t'as déjà mis du savon mais qu'y'a pas d'eau",
+            "third": "C'est quand Jamel Debouze fait un solo piano",
+            "closing": "Et ça fait... rien"
+          },
+          {
+            "first": "C'est être le psychiatre de Francis Lalane",
+            "second": "C'est être le Styliste de Francis Lalane",
+            "third": "C'est être le Parolier de Francis Lalane",
+            "closing": "Ca fait 30 ans"
+          },
+          {
+            "first": "...",
+            "second": "...",
+            "third": "... C'est la grève des intermittents",
+            "closing": "Ca fait creux"
+          },
+          {
+            "first": "C'est quand tu marches pieds nus sur un tout petit légo",
+            "second": "C'est quand lors d'un voyage en Inde tu bois de l'eau",
+            "third": "Quand ton voisin t'annonce qu'il se mets au saxo",
+            "closing": "Et ça fait mal, mal, mal"
+          },
+          {
+            "first": "C'est quand on te prépare un bon tartare de tripe",
+            "second": "C'est quand t'allumes ta cigarette du coté filtre",
+            "third": "C'est faire un match de foot con-tre l'armée d'Egypte",
+            "closing": "Et ça fait mal"
+          },
+          {
+            "first": "C'est quand t'es choisis pour être gardien au hand - ball",
+            "second": "Quand t'es dans la Mercos de la Princesse de Galle",
+            "third": "Quand le samedi soir c'est ta fille qui joue sur Canal",
+            "closing": "Et ça fait chier"
+          },
+          {
+            "first": "C'est quand tu dois aller à 16:00 à la poste",
+            "second": "Quand on te dit que tu ressembles à Alain Prost",
+            "third": "Quand tu regardes le dernier épisode de Lost",
+            "closing": "Et ça fait mal"
+          },
+          {
+            "first": "C'est quand on t'emmene voir un spectacle de claquette",
+            "second": "C'est marcher sur un truc mouillé juste en chaussette",
+            "third": "C'est voir un filme en 3D mais sans les lunettes",
+            "closing": "Et ça fait mal"
+          },
+          {
+            "first": "C'est quand ton frère siamois t'apprends qu'il a le sida",
+            "second": "Quand ta femme fait de l'échangisme un peu sans toi",
+            "third": "Quand des jeunes t'appellent Monsieur pour la première fois",
+            "closing": "Et ça fait mal"
+          }
+        ]
+    </script>
+    <script>
+      const INITIAL_VALUE = 4
+      let index = -1
+      let countForChorus = INITIAL_VALUE
+      function nextLyrics() {
+        if (--countForChorus === 0) {
+          countForChorus = INITIAL_VALUE
+        } else {
+          index++
+        }
+        
+        // Show chorus and hide verse when needed
+        document.querySelector('#verse').style.display = countForChorus === INITIAL_VALUE ? 'none' : 'block'
+        document.querySelector('#chorus').style.display = countForChorus === INITIAL_VALUE ? 'block' : 'none'
+        
+        const newLyrics = window.lyrics[index % window.lyrics.length]
+        Object.entries(newLyrics).forEach(([selector, lyrics]) => {
+          document.querySelector(`#${selector}`).innerHTML = lyrics
+        })
+      }
+      
+      Array.from(document.querySelectorAll('.lyrics')).forEach(el => el.addEventListener('click', nextLyrics))
+
+      nextLyrics()
+    </script>
+  </body>
+</html>
